@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<!--ALERT MESSAGE-->
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Welcome!</h4>
+    <p>You have successful Signed In to my Home Page .</p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+<p id="homepara">CodePlateau (MAD) is the best Human Capital Development Initiative of the YEAR!</p>
+
+<h1 id="homeh1"> Team MAD</h1>
+<div style="text-align: center;"> 
+    <img src="{{ url_for('static', filename='codeplapik22.jpg') }}" class="homeimg" title="CodePlateau 2.0-April 26th, 2021" alt="A picture of DG, PICTDA and the successful candidates for CodePlateau 2.0 "> 
+    
+    <p>DG, PICTDA together with Fellows</p>
+
+    <div class="home-logout">
+        <span class="btn btn-success" id="homebtn" > <a href="https://pictda.plateaustate.gov.ng" target="blank" class="home-logout" >Join Us</a> </span> OR <span class="btn btn-success" id="homebtn"> <a href="{{ url_for('logout')}}" class="home-logout"> Logout </a> </span>
+    </div>
+    
+            <div style="text-align: center;"><img src="{{ url_for('static', filename='hydroimage.png') }}" style="width: 5%; height: 10%;"></div>
+    <p><a class="btn btn-primary" href="https://pictda.plateaustate.gov.ng/" target="blank">Visit PICTDA</a></p>
+</div>
+   
+    
+{% endblock content %}
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div style="color: green;">{{ msg }}</div>
+    <h1>Hi {{session.username}}!!</br></br> Welcome to the index page... {{ session.email }}</h1>
+
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html> -->
